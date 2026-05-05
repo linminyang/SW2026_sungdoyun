@@ -5,7 +5,6 @@ slv=0
 
 def solve_sdk(x, y):
     global slv
-    if slv : return
     if(y == 9):
         y = 0
         x += 1
@@ -29,8 +28,6 @@ def solve_sdk(x, y):
         solve_sdk(x, y + 1)
         if slv : break
         arr[x][y]=0
-        check[0][x][i] = 0
-        check[1][y][i] = 0
         check[2][((x // 3) * 3 + y // 3)][i] = 0
 
 for i in range(9):
